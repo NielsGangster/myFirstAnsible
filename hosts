@@ -1,0 +1,12 @@
+[linux-servers]
+
+192.168.50.96 ansible_user=ansible
+192.168.50.97 ansible_user=ansible
+192.168.50.98 ansible_user=ansible
+
+[routers]
+kaas-eter ansible_host=192.168.50.100 ansible_user=cisco ansible_ssh_user=cisco ansible_connection=network_cli ansible_network_os=ios ansible_ssh_pass=cisco123
+
+[webservers]
+
+192.168.50.105 ansible_user=ansible

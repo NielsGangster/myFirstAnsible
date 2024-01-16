@@ -1,0 +1,16 @@
+- name: Playbook for Linux webserver
+  become: yes
+  hosts: webservers
+  tasks:
+
+
+    - name: Copy compose file to destination
+      copy:
+        src: docker-compose.yml
+        dest: /home/ansible/
+
+
+    - name: run docker-compose cacti
+      docker_compose:
+        project_src: /home/ansible/
+        state: present

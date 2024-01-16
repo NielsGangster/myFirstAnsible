@@ -1,0 +1,12 @@
+- name: Playbook for Linux webserver
+  become: yes
+  hosts: webservers
+  tasks:
+  
+    - name: Install packages
+      apt:
+        pkg:
+          - docker-compose
+          - docker
+          - unattended-upgrades
+        state: present

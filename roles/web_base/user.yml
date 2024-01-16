@@ -1,0 +1,10 @@
+---
+- name: Create a user 
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: Add user kaas
+    user:
+      name: kaas
+      shell: /bin/bash
+      home: /home/kaas

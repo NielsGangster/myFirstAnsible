@@ -1,0 +1,14 @@
+---
+
+- name:
+  hosts: linux-servers
+  become: yes
+  tasks:
+  
+    - name: "Update het Linux systeem"
+      apt:
+        name:
+        update_cache: yes
+        cache_valid_time: 3600
+        
+  
